@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <link rel="stylesheet" href="script.css">
+    <link rel="icon" href="gameIcon.png">
+    <script src="index.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #89C15E;
+        }
+        
+        .container {
+            position: absolute;
+            margin-top: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 32px; /* Adjust the size of the stars as needed */
+            height: 32px;
+            transform-origin: center;
+        }
+
+        .star1{ 
+            transform: translate(-280%, -0%) translate(150px) ; 
+            width: 115px;
+            height: 115px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83);
+        }
+        .star2 { transform: translate(50%, -120%) translate(120px);
+            width: 103px;
+            height: 103px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83);
+         }
+        .star3 { 
+            transform: translate(-500%, -350%) translate(100px); 
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83);
+        }
+        .star4 {
+             transform: translate(60%, -200%);; 
+             width: 32px;
+             height: 32px;
+             flex-shrink: 0;
+             fill: rgba(217, 217, 217, 0.83);            
+         }
+        .star5 { 
+            transform: translate(-1100%, 480%) translate(120px);
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83); 
+        }
+        .star6 { 
+            transform: translate(80%, -120%) translate(120px); 
+            width: 130px;
+            height: 130px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83);
+        }
+        .star7 { 
+            transform: translate(580%, -690%) translate(120px);
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83); 
+        }
+        .star9 { 
+            transform: translate(-300%, -80%) translate(120px) ;
+            width: 68px;
+            height: 68px;
+            flex-shrink: 0;
+            fill: rgba(217, 217, 217, 0.83); 
+        }
+    .newGame{
+            background-color: white;  
+            padding: 12px 24px; 
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: Roboto;
+            font-style: normal;
+            color: #656565;
+            transition: all 0.15s;
+            transform: translate(-180%, 800%) translate(120px);
+        }
+       .text {
+            text-align: center;
+            color: white;
+            /* margin-top: 20px; Adjust the margin as needed */
+            font-family:Roboto;
+            transform: translate(0%,60%) translate(120px);
+        }
+
+        .HURRAY {
+            font-size: 91px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin-top: 0;
+        }
+        .rules{
+            width: 119px;
+            height: 30px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            border: 2px solid #FFF;
+            background: rgba(217, 217, 217, 0.00);
+            color: white;
+            padding-top: 10px;
+            text-align: center;
+            transform: translate(170%, 790%) translate(120px);
+            cursor: pointer;
+        }
+        
+/* CSS for modal */
+.modal{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    /* background-color: #fefefe; */
+    margin-top: 38px;
+    margin-left: 1010px;
+    /* padding: 20px; */
+    width: 278px;
+    height: 325px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    border: 7px solid #FFF;
+    background: #004429;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+}
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*  */
+  
+.Ellipse{
+    width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  fill: #F00;
+  stroke-width: 5px;
+  stroke: #FFF;
+  margin-left: 1250px;
+  margin-bottom: 0;
+  padding-top: 150px;
+  transform: translate(-180%, -10%) translate(120px);
+  position: relative;
+}
+.cross {
+    top: 25%;
+    left: 83.5%;
+    transform: translate(-220%, 85%) translate(120px);
+    font-size: 44px;
+    font-weight: 400;
+    font-family: Dangrek;
+    color: white;
+    text-align: center;
+}
+.bullets::before{
+    width: 8px;
+height: 8px;
+flex-shrink: 0;
+background: #FFD600;
+}
+
+li{
+    color: white;
+    list-style: none;
+    font-size: 15px;
+    text-align: justify;
+    margin: 8px;
+}
+li:not(:last-child){
+    margin: 5px;
+}
+li::before{
+    content: "\2610";
+    color: #FFD600;
+    background-color: #FFD600;
+    width: 8px;
+   height: 8px;
+   margin-right: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Star 1.svg" class="star star1">
+        <img src="Star 3.svg" class="star star3">
+        <img src="Star 4.svg" class="star star4">
+        <img src="Star 2.svg" class="star star2">
+        <img src="Star 9.svg" class="star star9">
+        <img src="Vector.png" id="Vector">
+        <img src="Star 5.svg" class="star star5">
+        <img src="Star 7.svg" class="star star7">
+        <img src="Star 6.svg" class="star star6">
+    </div>
+    <div class="text">
+        <h1 class="HURRAY">HURRAY!!</h1>
+        <h2>YOU WON THE GAME</h2>
+    </div>
+    <div class="playAgain">
+        <div class="newGame" onclick="openGame()">PLAY AGAIN</div>       
+    </div>
+    <div class="rules" onclick="openRulesModal()"> RULES </div>
+    <div  id="rulesModal" class="modal">
+        <div class="Ellipse">
+                <div class="cross">X</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="27.5" fill="#FF0000" stroke="white" stroke-width="5"/>
+                </svg>
+        </div>
+        <div class="modal-content">
+          <!-- <span class="close">&times;</span> -->
+          <h2>Game Rules</h2>
+          <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you ll count off “rock, paper, scissors, shoot or just rock, paper, scissors.</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>

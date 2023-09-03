@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: "Barlow Condensed", sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 150vh;
+    background: #8CC461;
+}
+.title{
+    width: 100px;
+height: 20px;
+flex-shrink: 0;
+color: #FFF;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 4px;
+margin-top: 30px;
+}
+.scoreBoard{
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 800px;
+height: 158px;
+flex-shrink: 0;
+display: flex;
+justify-content: space-around;
+margin-top: 20px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.scoreComputer{
+    width: 139px;
+height: 128px;
+flex-shrink: 0;
+border-radius: 9px;
+background: #FFF;
+display: flex;
+flex-direction: column;
+padding: 10px;
+margin-top: 13px;
+}
+.scoreUser{
+    width: 139px;
+height: 128px;
+flex-shrink: 0;
+border-radius: 9px;
+background: #FFF;
+display: flex;
+flex-direction: column;
+padding: 10px;
+margin-top: 13px;
+}
+.scoreComputer ,.scoreUser p{
+    color: #656565;
+font-family: Roboto;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.7px;
+}
+#span1{
+    margin: 25px;
+}
+#span2{
+    padding-left: 30px;
+}
+#span3{
+    padding-left: 24px;
+}
+#score0{
+    width: 79px;
+height: 63px;
+flex-shrink: 0;
+color: #252525;
+text-align: center;
+font-family: Roboto;
+font-size: 68px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+padding-left: 35px;
+}
+#score01{
+    width: 79px;
+height: 63px;
+flex-shrink: 0;
+color: #252525;
+text-align: center;
+font-family: Roboto;
+font-size: 68px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+padding-left: 35px;
+}
+.hands{
+    background-image: url("triangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 476px;
+    height: 430px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+}
+.rock{
+    margin-right: 20px;
+}
+.scissors{
+    margin-left: 20px;
+}
+.hands .hand{
+    cursor: pointer;
+    transition: all 0.25s;
+}
+.hands .hand:hover{
+    transform: translate3d(0px ,-8px ,0px);
+}
+.contest{
+    width: 900px;
+    display: none;
+    margin-top: 50px;
+}
+.contest img{
+    width: 278px;
+    height: 275px;
+}
+.contest > div {
+    flex: 1;
+}
+.contest h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contest .handImageContainer{
+    display: flex;
+    justify-content: center;
+}
+.referee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.referee h1{
+    font-size: 45px;
+}
+.referee h1 span{
+    font-size: 25px;
+}
+.newGame{
+    background-color: white;  
+    padding: 12px 24px; 
+    border-radius: 6px;
+    cursor: pointer;
+    color: #656565;
+    transition: all 0.15s;
+}
+.newGame:hover{
+    background-color: bisque;
+    transform: translate3d(0px, -2px, 0px);
+}
+.buttons{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     padding: 20px;
+    width: 400px;
+    display: none;
+    margin-top: 300px;
+    margin-left: 1100px;
+}
+
+.rules{
+    background-color: white;  
+    padding: 12px 24px; 
+    border-radius: 6px;
+    cursor: pointer;
+    color: #656565;
+    transition: all 0.15s;  
+}
+.buttons1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+   width: 400px;
+   margin-top: 300px;
+   margin-left: 1100px;
+}
+
+.rules1{
+   background-color: white;  
+   padding: 12px 24px; 
+   border-radius: 6px;
+   cursor: pointer;
+   color: #656565;
+   transition: all 0.15s;  
+}
+.nextButton{
+    background-color: white;  
+    border-radius: 6px;
+    font-style: normal;
+    padding: 12px 24px; 
+    cursor: pointer;
+    color: #656565;
+    transition: all 0.15s;   
+    width: 119px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+
+/* CSS for modal */
+.modal{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    /* background-color: #fefefe; */
+    margin-top: 38px;
+    margin-left: 1010px;
+    /* padding: 20px; */
+    width: 278px;
+    height: 325px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    border: 7px solid #FFF;
+    background: #004429;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*  */
+  
+.Ellipse{
+    width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  fill: #F00;
+  stroke-width: 5px;
+  stroke: #FFF;
+  margin-left: 1250px;
+  margin-bottom: 0;
+  padding-top: 150px;
+}
+.cross {
+    position: absolute;
+    top: 25%;
+    left: 84.2%;
+    transform: translate(-50%, -50%);
+    font-size: 44px;
+    font-weight: 400;
+    font-family: Dangrek;
+    color: white;
+    text-align: center;
+}
+.bullets::before{
+    width: 8px;
+height: 8px;
+flex-shrink: 0;
+background: #FFD600;
+}
+
+li{
+    color: white;
+    list-style: none;
+    font-size: 15px;
+    text-align: justify;
+    margin: 8px;
+}
+li:not(:last-child){
+    margin: 5px;
+}
+li::before{
+    content: "\2610";
+    color: #FFD600;
+    background-color: #FFD600;
+    width: 8px;
+   height: 8px;
+   margin-right: 5px;
+}

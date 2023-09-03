@@ -1,0 +1,23 @@
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 1500px;
+    height: 738px;
+    background: #89C15E;
+}
+
+#star3{
+    margin-top: -350px;
+    margin-left: 200px;
+}
+.newGame{
+    background-color: white;  
+    padding: 12px 24px; 
+    border-radius: 6px;
+    cursor: pointer;
+    color: #656565;
+    transition: all 0.15s;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS Game</title>
+    <link rel="icon" href="gameIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
+</head>
+<body>
+     <div class="wrapper">
+            <div class="scoreBoard">
+                <div class="title">
+                    <p>ROCK <br> PAPER <br>SCISSORS</p>
+                </div>
+                <div class="scoreComputer">
+                    <p>COMPUTER <br><span id="span1">SCORE</span> </p>
+                    <h1 id="score0">0</h1>
+                </div>
+                <div class="scoreUser">
+                    <p><span id="span2"></span>USER <br> <span id="span3">SCORE</span> </p>
+                    <h1 id="score01">0</h1>
+                </div>
+       </div>
+            <div class="hands">
+                <div class="hand rock">
+                    <img src="Rock.png" onclick="pickUserHand('rock')">
+                </div>
+                <div class="hand scissors">
+                    <img src="Scissors.png" onclick="pickUserHand('scissors')">
+                </div>
+                <div class="hand paper">
+                  <img src="Paper.png" onclick="pickUserHand('paper')">
+                </div>
+            </div>
+            <div class="contest">
+                <div class="userhand">
+                    <h1>YOU PICKED</h1>
+                    <div class="handImageContainer">
+                        <img id="userPickedImage" src="Paper.png">
+                    </div>
+                </div>
+                <div class="referee">
+                    <div class="decission"><h1>YOU WIN <span id="PC">AGAINST PC</span></h1></div>
+                    <div class="newGame" onclick="replay()">PLAY AGAIN</div>
+                </div>
+                <div class="computerHand">
+                    <h1>PC PICKED</h1>
+                    <div class="handImageContainer"></div>
+                    <img id="computerPickedImage" src=" ">
+                </div>
+            </div>
+            <div class="buttons1">
+                <div class="rules" onclick="openRulesModal()">RULES</div>
+            </div>
+            <div class="buttons">
+                <div class="rules" onclick="openRulesModal()">RULES</div>
+                <div class="nextButton" onclick="redirectToWinPage()"><P>NEXT</P></div>
+            </div>  
+            <div  id="rulesModal" class="modal">
+                <div class="Ellipse">
+                        <div class="cross">X</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <circle cx="30" cy="30" r="27.5" fill="#FF0000" stroke="white" stroke-width="5"/>
+                        </svg>
+                </div>
+                <div class="modal-content">
+                  <!-- <span class="close">&times;</span> -->
+                  <h2>Game Rules</h2>
+                  <ul>
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you ll count off “rock, paper, scissors, shoot or just rock, paper, scissors.</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                  </ul>
+                </div>
+              </div>
+                            
+            </div>
+</body>
+</html>
